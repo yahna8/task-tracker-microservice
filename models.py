@@ -7,5 +7,7 @@ class Task(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, nullable=False)
     description = Column(String)
+    priority = Column(Integer, nullable=False)  # Ensure this field exists
+    deadline = Column(String, nullable=False)
     completed = Column(Boolean, default=False)
     user_id = Column(Integer, nullable=False)  # Associate task with a user

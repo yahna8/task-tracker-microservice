@@ -6,9 +6,6 @@ from database import get_db, Base, engine
 from models import Task
 from utils.auth import get_current_user
 
-# Create the database and table
-Base.metadata.create_all(bind=engine)
-
 # Initialize router
 router = APIRouter()
 
